@@ -1,0 +1,27 @@
+<nb-layout class="login">
+  <nb-layout-column>
+    <nb-card [size]="'medium'" style="min-width: 300px;max-width:30%; margin: 0 auto;margin-top:10%;background-color: rgba(255,255,255,.1)">
+      <nb-card-header style="background-color: rgba(255,255,255,.1);text-align: center"><img src="../../../assets/images/logo.png" style="height:50px;"/>
+        <h5 style="text-align: center;font-weight: 400;color:#fff">Please Login</h5></nb-card-header>
+      <nb-card-body>
+        <nb-list>
+          <nb-list-item style="border: none!important;">
+            <input type="text" nbInput fullWidth shape="semi-round" placeholder="Username" #username style="border-radius: 4px;">
+          </nb-list-item>
+          <nb-list-item style="border: none!important;">
+            <input type="password" nbInput fullWidth shape="semi-round" placeholder="Password"
+                   (keydown.enter)="onKeypress($event, username.value)" #password  style="border-radius: 4px;">
+          </nb-list-item>
+          <nb-list-item style="border: none!important; text-align: center">
+            <button nbButton hero status="primary" (click)="login(username.value, password.value)" style="width: 100%;
+            background-color: rgb(38, 173, 73);font-weight: 400;
+            font-size: 1rem;
+            background-image: none;">Login</button>
+          </nb-list-item>
+        </nb-list>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+
+</nb-layout>
+<div class="bg"></div>

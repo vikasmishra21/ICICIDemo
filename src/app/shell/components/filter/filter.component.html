@@ -1,0 +1,33 @@
+
+<div (clickOutside)="closeDropdown($event)"> 
+  <select *ngIf="!filterConfig.isNested && !filterConfig.isMultiSelected" class="form-control" #singleSelect [ngModel]="singleSelectOption"
+          (ngModelChange)="onFilterSelection(singleSelect.value)">
+    <option value="null" disabled selected>Select {{pFilterConfig.variableText}}</option>
+    <option *ngFor="let option of filteredOptions" [style.display]="option.isHidden ? 'none': ''" [value]="option.code">{{option.text}}</option>
+  </select>
+
+  <div *ngIf="filterConfig.isNested || filterConfig.isMultiSelected">
+    <button (click)="toggleDropdown()" class="form-control hand-pointer"
+            style="text-align: left;">{{filterConfig.placeHolder || filterConfig.variableText}}</button>
+    <div class="nested-dropdown" [hidden]="!showDropdown">
+      <div class="fixOption">
+        <label class="w-100 mb-1">
+          <input placeholder="Search..." [(ngModel)]="searchText" class="form-control"
+                 (keyup)="searchTerm$.next(searchText)">
+        </label>
+        <div style="margin-top: 10px;">   
+          <!--<label class="hand-pointer blue-btn" title="Select All" (click)="onSelectAll()"> <i class="fa fa-check mr-2"></i>Select All</label>-->
+          <label class="hand-pointer blue-btn" title="Submit" (click)="onSubmit()"> <i class="fa fa-check mr-2"></i>Submit</label>
+          <label class="hand-pointer red-btn" title="Clear All" (click)="onClearAll(!filterConfig.enableSubmitButton)"><i class="fa fa-times mr-2"></i>Clear All</label>
+          <label class="shaking" id="limit" #limit *ngIf="filterConfig.maxSelectionLimit !== undefined">You can only
+              select {{filterConfig.minSelectionLimit || 0}} to {{filterConfig.maxSelectionLimit}} values</label>
+        </div>
+      </div>
+      <div class="scrollOption">
+        <app-option *ngFor="let option of filteredOptions" [option]="option"
+                    (optionSelect)="onMultipleOptionSelection($event)"></app-option>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.body {
+  padding-top: 0;
+}
+.nb-theme-corporate nb-list-item {
+  padding: .75rem 1rem;
+}
+
+.nb-theme-corporate .appearance-filled.status-primary:focus {
+  border-color: transparent;
+}
+
+.nb-theme-corporate [nbButton]:focus {
+  box-shadow: 0 0 0 0rem #e4e9f2;
+  outline: none;
+}

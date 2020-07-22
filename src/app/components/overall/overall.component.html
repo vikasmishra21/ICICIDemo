@@ -1,0 +1,87 @@
+<div style="margin: 2px auto; width: 100%">
+  <nb-card>
+    <nb-card-body>
+      <app-filter-chip-list></app-filter-chip-list>
+    </nb-card-body>
+  </nb-card>
+  <div class="row">
+    <div class="col" style="width: 20%;padding-left: 15px;">
+      <nb-card style="width: 100%; height: 200px;">
+        <nb-card-header><i class="fa fa-tachometer"></i>{{npsKPI.Name}}</nb-card-header>
+        <nb-card-body>
+          <app-chart-container [chart]="npsKPI" [updateData]="onDataUpdate"></app-chart-container>
+          <app-chart-container [chart]="npsTrend" [updateData]="onDataUpdate"></app-chart-container>
+        </nb-card-body>
+      </nb-card>
+      <nb-card style="width: 100%; height: 200px;">
+        <nb-card-header><i class="fa fa-tachometer"></i>Overall Experience</nb-card-header>
+        <nb-card-body>
+          <app-chart-container [chart]="topBox" [updateData]="onDataUpdate"></app-chart-container>
+          <app-chart-container [chart]="topBoxTrend" [updateData]="onDataUpdate"></app-chart-container>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="col" style="width: 40%;">
+      <nb-card style="width: 100%; height: 420px;">
+        <nb-card-header><i class="fa fa-line-chart"></i>Impact on KPI's</nb-card-header>
+        <nb-card-body>
+          <app-chart-container [chart]="kpiImpact" [updateData]="onDataUpdate"></app-chart-container>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="col" style="width: 40%; padding-right: 0px" >
+      <nb-card style="width: 100%; height: 420px;">
+        <nb-card-header><i class="fa fa-bar-chart"></i>KPI's</nb-card-header>
+        <nb-card-body>
+            <app-chart-container [chart]="kpis" [updateData]="onDataUpdate"></app-chart-container>
+<!--            <app-chart-container *ngFor="let trend of kpiTrends" [chart]="trend" [updateData]="onDataUpdate"></app-chart-container>-->
+          <div style="position:absolute;top:22px;right: 45px;">
+            <div *ngFor="let diff of kpiDiff" style="height: 68px;position: relative;top: 15px;">
+              <nb-icon *ngIf="diff < 0" icon="arrow-downward" style="color: red"></nb-icon>
+              <nb-icon *ngIf="diff > 0" icon="arrow-upward" style="color: darkgreen"></nb-icon>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col" style="width: 100%; padding-right: 0px;padding-left:15px;">
+      <nb-card style="width: 100%; height:380px;">
+        <nb-card-header><i class="fa fa-tachometer"></i>Over The Counter</nb-card-header>
+        <nb-card-body class="p-0" style="padding: 0px!important">
+          <div class="row">
+            <div class="col" style="width: 35%;border-right:1px solid #e4e4e4">
+              <app-chart-container [chart]="otcResolution" [updateData]="onDataUpdate"></app-chart-container>
+            </div>
+            <div class="col" style="width: 35%;border-right:1px solid #e4e4e4">
+              <app-chart-container [chart]="otcNoCompletion" [updateData]="onDataUpdate"></app-chart-container>
+            </div>
+            <div class="col" style="width: 30%">
+              <app-chart-container [chart]="tat" [updateData]="onDataUpdate"></app-chart-container>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="col" style="width:100%; padding-right: 0px;padding-left:15px;">
+      <nb-card style="width: 100%; height: 380px;">
+        <nb-card-header><i class="fa fa-pie-chart"></i>NON-Over The Counter</nb-card-header>
+        <nb-card-body  style="padding: 0px!important">
+          <div class="row">
+            <div class="col" style="width: 50%;border-right:1px solid #e4e4e4">
+              <app-chart-container [chart]="nonOtcResolution" [updateData]="onDataUpdate"></app-chart-container>
+            </div>
+<!--            <div class="col" style="width: 15%">-->
+<!--              <app-chart-container [chart]="tat" [updateData]="onDataUpdate"></app-chart-container>-->
+<!--            </div>-->
+            <div class="col" style="width: 46% ;padding:10px;">
+              <app-chart-container [chart]="reasons" [updateData]="onDataUpdate"></app-chart-container>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>

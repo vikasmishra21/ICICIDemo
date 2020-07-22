@@ -1,0 +1,74 @@
+.nested-dropdown{
+  text-align: left;
+  padding: 10px;
+  background: white;
+  /* max-height: 350px;
+  overflow-y: scroll; */
+  width: 92%;
+  position: absolute;padding-top: 0px;
+}
+
+.scrollOption{margin-top: 120px;}
+
+.blue-btn{background-color: rgba(10,187,135,.1);
+  color: #0abb87;
+  cursor: text!important;    font-size: .75rem;padding: 5px;margin-right: 10px;border-radius: 4px;letter-spacing: .5px;}
+.red-btn{background-color: rgba(253,57,122,.1);
+  color: #ED1C24;
+  cursor: text!important;padding: 5px;    font-size: .75rem;border-radius: 4px;letter-spacing: .5px;}
+
+.fixOption{    position: absolute;
+  background: #fff;
+  z-index: 1;
+  width: 250px;
+  padding-left: 0px;
+}
+.form-control {
+  display: block;
+  width: 94%;
+  padding: .55rem .75rem;
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #74788d;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin-top: 5px;
+  -webkit-appearance: none;
+  background: url(../../../../assets/images/arrowDown.png) no-repeat 98%;font-family:  'Muli', Roboto!important;
+}
+input.form-control {
+  display: block;
+  width: 94%;
+  padding: .35rem .75rem;
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #74788d;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin-top: 5px;
+  -webkit-appearance: none;
+  background: none;font-family:  'Muli', Roboto!important;
+}
+
+.form-control:focus {
+  color: #505050;
+  background-color: transparent;
+  border-color: #C5C5C5;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+.form-control:focus {
+  color: #505050;
+  background-color: transparent;
+  border-color: #C5C5C5;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+}

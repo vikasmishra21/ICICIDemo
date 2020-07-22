@@ -1,0 +1,20 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <img src="../../../assets/images/logo.png" style="height: 30px;margin-left: 10px;float:left;margin-right: auto">
+    <button style="float:right" nbButton status="primary" size="tiny" (click)="toggle()" title="Apply Filter">
+      <i class="fa fa-filter" style="font-size: 1rem"></i>
+    </button>
+    <button style="float:right" nbButton status="primary" size="tiny" title="Logout">
+        <i class="fa fa-sign-out"  style="font-size: 1rem"></i>
+      </button>
+  </nb-layout-header>
+  <nb-sidebar fixed right state="collapsed">
+    <div style="color:#0095d9;padding: 10px;background-color: #fafafa;border-bottom: 1px solid #f4f4f4;position: relative;">Filters
+        <a (click)="toggle()" class="kt-quick-panel__close clickable" id="kt_quick_panel_close_btn"><i class=" fa fa-times"></i></a>
+    </div>
+    <app-filter-menu></app-filter-menu>
+  </nb-sidebar>
+  <nb-layout-column  style="margin:0px auto; width: 70%">
+    <nb-route-tabset [fullWidth]="'false'" [tabs]="tabs" ></nb-route-tabset>
+  </nb-layout-column>
+</nb-layout>

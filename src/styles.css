@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+body { color: #4d4d4d; font-family: 'Muli', Roboto!important; }
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1em;
+}
+.col{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nb-theme-corporate nb-layout .layout nb-layout-header nav {
+  box-shadow: 0 2px 12px 0 #dfe3eb;
+  height: 3.75rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  color: #f7fafb;
+}
+.nb-theme-corporate nb-sidebar .main-container {
+  background: #ffffff;
+}
+.nb-theme-corporate nb-layout .layout .layout-container .content .columns nb-layout-column {
+  padding: 0.25rem 2.25rem 0.75rem;
+}
+.nb-theme-corporate nb-layout .layout nb-layout-header.fixed ~ .layout-container>nb-sidebar>.main-container {
+  height: calc(100vh - 3.75rem);
+}
+.nb-theme-corporate nb-layout .layout .layout-container nb-sidebar.fixed {
+  top: 3.75rem;
+}
+.nb-theme-corporate nb-card {
+  border: none;
+}
+
+.nb-theme-corporate nb-route-tabset .route-tabset {
+  font-size: 1rem;
+  border-bottom: none;
+}
+
+.nb-theme-corporate nb-route-tabset .route-tabset .route-tab a {
+  padding: 1rem
+}
+
+.nb-theme-corporate nb-card-header{font-family:  'Muli', Roboto!important;font-weight: 500!important;background-color: #fafafa;padding: .75rem 1.25rem!important;}
+.nb-theme-corporate nb-layout .layout{background-color: #f2f3f8}
+.nb-theme-corporate nb-card{box-shadow: 0 1px 15px 1px rgba(69,65,78,.08);border-radius: 2px!important}
+.nb-theme-corporate nb-route-tabset .tab-link{font-family:  'Muli', Roboto!important;font-weight: 500!important;text-transform: capitalize!important}
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+ul{padding: 0px;margin: 0px;}
+.nb-theme-corporate nb-card-body{padding: .75rem 1rem!important;}
+.route-tabset{background-color: #fff;}
+.col .fa{color:#0095d9;padding: 5px;border-radius: 2px;background-color: #f4f4f8;margin-right: 10px;}
+.nb-theme-corporate nb-layout .layout nb-layout-header.fixed ~ .layout-container{padding-top: 3.5rem}
+
+.nb-theme-corporate nb-layout .layout nb-layout-header.fixed ~ .layout-container>nb-sidebar>.main-container
+{box-shadow: 0 1px 9px -3px rgba(0,0,0,.75);}
+
+.nb-theme-corporate nb-layout .layout .layout-container nb-sidebar.fixed, .nb-theme-corporate nb-layout .layout .layout-container nb-sidebar .main-container-fixed
+{top:3.5rem!important}
+.nb-theme-corporate nb-sidebar.expanded{width:18rem}
+.nb-theme-corporate nb-sidebar .main-container{width:19rem}
+.nb-theme-corporate nb-card{margin-bottom: 1rem}
+.scrollable{padding: 0px!important;}
+
+.kt-quick-panel__close {
+  position: absolute;
+  z-index: 1;
+  right: 1.5rem;
+  top: .51rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: #f7f8fa;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.nb-theme-corporate nb-layout .layout nb-layout-header nav{height:3.5rem!important;padding: 0px;}
+
+.nb-theme-corporate [nbButton].appearance-filled.status-primary {
+  background-color: #fafafa;
+  border-color: #fff;
+  color: #0095d9;
+}
+
+.nb-theme-corporate [nbButton].appearance-filled.status-primary:hover {
+  background-color: #0095d9;
+  border-color: none;
+  color: #fff;
+}
+
+.bg{position: absolute;top:0px;left:0px;bottom: 0px;right: 0px;background: url(assets/images/bg3.jpg) no-repeat;background-size: cover;
+  z-index: -1;}
+
+  
+.nb-theme-corporate nb-layout.login .layout{background: transparent!important}
+
+.nb-theme-corporate nb-card.size-medium{height: 23rem;}
+
+.nb-theme-corporate nb-list-item{padding:.5rem 1rem}
+.nb-theme-corporate [nbInput]:focus {
+  outline: none;
+  border-color: #1a34b8;
+  box-shadow: 0 0 0 0.1rem #e4e9f2;
+}
+.nb-theme-corporate [nbInput].size-medium {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0.4375rem 1.125rem;
+}
+
+.nb-theme-corporate nb-route-tabset .route-tab.active .tab-link {
+  background-color: #0095d9;
+  color: #fff;
+}
+
+.route-tabset[_ngcontent-uvt-c6] .route-tab[_ngcontent-uvt-c6] a[_ngcontent-uvt-c6]::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  border-radius: 3px;
+  bottom: 0px;
+  left: 0;
+}
+
+
+.nb-theme-corporate [nbButton]:focus {
+  box-shadow: 0 0 0 0rem #e4e9f2;
+  outline: none;
+}
+
+.nb-theme-corporate [nbButton].appearance-filled.status-primary:focus {
+  border-color: transparent;
+}
+
+.clickable{cursor: pointer;}

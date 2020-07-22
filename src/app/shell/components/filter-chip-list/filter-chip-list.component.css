@@ -1,0 +1,16 @@
+.filter-chip {
+  vertical-align: top;
+  margin-top: .3rem;
+  margin-right: .5rem;
+  width: 100px;
+  display: inline-block;float: left;
+}
+
+.chip-list {
+  width: 80%;
+  float: left;
+  display: inline-block;
+}
+.float-left.mt-1.mr-1.font-normal {
+  font-size: 13px;
+}
